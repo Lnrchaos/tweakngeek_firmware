@@ -67,12 +67,14 @@
     - Implement dynamic pin function assignment
     - _Requirements: 5.4, 2.2_
 
-  - [-] 3.3 Implement Radio HAL for CC1101 and Bluetooth
+  - [x] 3.3 Implement Radio HAL for CC1101 and Bluetooth
+
 
     - Write unified radio interface for multiple hardware types
     - Create frequency and power management functions
     - Implement protocol-agnostic transmission and reception
     - _Requirements: 6.1, 6.2, 2.2_
+
 
   - [ ] 3.4 Implement display and input HAL
     - Write display driver for FlipperZero screen

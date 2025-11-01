@@ -79,7 +79,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>Z:\tweakn_firmware\Tweakngeek_Firmware\include;Z:\tweakn_firmware\Tweakngeek_Firmware\src;Z:\tweakn_firmware\Tweakngeek_Firmware\src\hal;Z:\tweakn_firmware\Tweakngeek_Firmware\src\kernel;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wextra -Wpedantic -fdata-sections -ffunction-sections -fstack-usage --specs=nano.specs -g3 -gdwarf-2 -O0</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) -g3 -gdwarf-2 -O0</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -96,7 +96,6 @@
       <SupportJustMyCode></SupportJustMyCode>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <WarningLevel>EnableAllWarnings</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;DEBUG;HAL_LAYER=1;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
@@ -120,7 +119,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>Z:\tweakn_firmware\Tweakngeek_Firmware\include;Z:\tweakn_firmware\Tweakngeek_Firmware\src;Z:\tweakn_firmware\Tweakngeek_Firmware\src\hal;Z:\tweakn_firmware\Tweakngeek_Firmware\src\kernel;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wextra -Wpedantic -fdata-sections -ffunction-sections -fstack-usage --specs=nano.specs -g3 -gdwarf-2 -O0</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) -g3 -gdwarf-2 -O0</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ExceptionHandling>
@@ -136,7 +135,6 @@
       <SupportJustMyCode></SupportJustMyCode>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <WarningLevel>EnableAllWarnings</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;DEBUG;HAL_LAYER=1;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
@@ -162,7 +160,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>Z:\tweakn_firmware\Tweakngeek_Firmware\include;Z:\tweakn_firmware\Tweakngeek_Firmware\src;Z:\tweakn_firmware\Tweakngeek_Firmware\src\hal;Z:\tweakn_firmware\Tweakngeek_Firmware\src\kernel;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wextra -Wpedantic -fdata-sections -ffunction-sections -fstack-usage --specs=nano.specs -g3 -gdwarf-2 -O0</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) -g3 -gdwarf-2 -O0</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ExceptionHandling>
@@ -178,7 +176,6 @@
       <SupportJustMyCode></SupportJustMyCode>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <WarningLevel>EnableAllWarnings</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;DEBUG;HAL_LAYER=1;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
@@ -204,7 +201,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>Z:\tweakn_firmware\Tweakngeek_Firmware\include;Z:\tweakn_firmware\Tweakngeek_Firmware\src;Z:\tweakn_firmware\Tweakngeek_Firmware\src\hal;Z:\tweakn_firmware\Tweakngeek_Firmware\src\kernel;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wextra -Wpedantic -fdata-sections -ffunction-sections -fstack-usage --specs=nano.specs -g3 -gdwarf-2 -O0</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) -g3 -gdwarf-2 -O0</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -221,7 +218,6 @@
       <SupportJustMyCode></SupportJustMyCode>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <WarningLevel>EnableAllWarnings</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;DEBUG;HAL_LAYER=1;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
@@ -302,6 +298,9 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   <ItemGroup>
     <ClCompile Include="Z:\tweakn_firmware\Tweakngeek_Firmware\src\hal\hal_base.c" />
     <ClCompile Include="Z:\tweakn_firmware\Tweakngeek_Firmware\src\hal\hal_utils.c" />
+    <ClCompile Include="Z:\tweakn_firmware\Tweakngeek_Firmware\src\hal\hal_gpio.c" />
+    <ClCompile Include="Z:\tweakn_firmware\Tweakngeek_Firmware\src\hal\hal_radio.c" />
+    <ClCompile Include="Z:\tweakn_firmware\Tweakngeek_Firmware\src\hal\hal_display.c" />
     <ClCompile Include="Z:\tweakn_firmware\Tweakngeek_Firmware\src\hal\hal_stub.c" />
   </ItemGroup>
   <ItemGroup />

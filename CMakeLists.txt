@@ -19,7 +19,12 @@ set(MCU_MODEL STM32WB55xx)
 
 # Cross-compilation toolchain
 if(NOT CMAKE_TOOLCHAIN_FILE)
-    set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/cmake/arm-none-eabi-gcc.cmake)
+    if(MSVC)
+        # Use Windows MSVC for development/testing
+        include(${CMAKE_SOURCE_DIR}/cmake/windows-msvc.cmake)
+    else()
+        set(CMAKE_TOOLCHAIN_FILE ${CMAKE_SOURCE_DIR}/cmake/arm-none-eabi-gcc.cmake)
+    endif()
 endif()
 
 # Build configuration
@@ -68,10 +73,20 @@ set(RELEASE_FLAGS
 )
 
 # Apply flags based on build type
-if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-    add_compile_options(${COMMON_FLAGS} ${DEBUG_FLAGS})
+if(NOT MSVC)
+    # Only apply GCC/ARM flags for non-MSVC builds
+    if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+        add_compile_options(${COMMON_FLAGS} ${DEBUG_FLAGS})
+    else()
+        add_compile_options(${COMMON_FLAGS} ${RELEASE_FLAGS})
+    endif()
 else()
-    add_compile_options(${COMMON_FLAGS} ${RELEASE_FLAGS})
+    # MSVC flags are handled in windows-msvc.cmake
+    if(CMAKE_BUILD_TYPE STREQUAL "Debug")
+        add_compile_options(${DEBUG_FLAGS})
+    else()
+        add_compile_options(${RELEASE_FLAGS})
+    endif()
 endif()
 
 # Linker flags
@@ -84,7 +99,10 @@ set(LINKER_FLAGS
     --specs=nano.specs
 )
 
-add_link_options(${LINKER_FLAGS})
+# Apply linker flags only for ARM builds
+if(NOT MSVC)
+    add_link_options(${LINKER_FLAGS})
+endif()
 
 # Add subdirectories
 add_subdirectory(src/kernel)
@@ -106,15 +124,17 @@ target_link_libraries(tweakngeek_firmware
     services
 )
 
-# Generate binary and hex files
-add_custom_command(TARGET tweakngeek_firmware POST_BUILD
-    COMMAND ${CMAKE_OBJCOPY} -O binary $<TARGET_FILE:tweakngeek_firmware> ${CMAKE_BINARY_DIR}/tweakngeek.bin
-    COMMAND ${CMAKE_OBJCOPY} -O ihex $<TARGET_FILE:tweakngeek_firmware> ${CMAKE_BINARY_DIR}/tweakngeek.hex
-    COMMENT "Generating binary and hex files"
-)
+# Generate binary and hex files (ARM builds only)
+if(NOT MSVC AND NOT SKIP_ARM_POST_BUILD)
+    add_custom_command(TARGET tweakngeek_firmware POST_BUILD
+        COMMAND ${CMAKE_OBJCOPY} -O binary $<TARGET_FILE:tweakngeek_firmware> ${CMAKE_BINARY_DIR}/tweakngeek.bin
+        COMMAND ${CMAKE_OBJCOPY} -O ihex $<TARGET_FILE:tweakngeek_firmware> ${CMAKE_BINARY_DIR}/tweakngeek.hex
+        COMMENT "Generating binary and hex files"
+    )
 
-# Print size information
-add_custom_command(TARGET tweakngeek_firmware POST_BUILD
-    COMMAND ${CMAKE_SIZE} $<TARGET_FILE:tweakngeek_firmware>
-    COMMENT "Firmware size information"
-)
+    # Print size information
+    add_custom_command(TARGET tweakngeek_firmware POST_BUILD
+        COMMAND ${CMAKE_SIZE} $<TARGET_FILE:tweakngeek_firmware>
+        COMMENT "Firmware size information"
+    )
+endif()

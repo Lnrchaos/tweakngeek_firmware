@@ -7,6 +7,15 @@
     <ClCompile Include="Z:\tweakn_firmware\Tweakngeek_Firmware\src\hal\hal_utils.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Z:\tweakn_firmware\Tweakngeek_Firmware\src\hal\hal_gpio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\tweakn_firmware\Tweakngeek_Firmware\src\hal\hal_radio.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Z:\tweakn_firmware\Tweakngeek_Firmware\src\hal\hal_display.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="Z:\tweakn_firmware\Tweakngeek_Firmware\src\hal\hal_stub.c">
       <Filter>Source Files</Filter>
     </ClCompile>

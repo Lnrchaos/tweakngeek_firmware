@@ -79,7 +79,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>Z:\tweakn_firmware\Tweakngeek_Firmware\include;Z:\tweakn_firmware\Tweakngeek_Firmware\src;Z:\tweakn_firmware\Tweakngeek_Firmware\src\applications;Z:\tweakn_firmware\Tweakngeek_Firmware\src\runtime;Z:\tweakn_firmware\Tweakngeek_Firmware\src\kernel;Z:\tweakn_firmware\Tweakngeek_Firmware\src\hal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wextra -Wpedantic -fdata-sections -ffunction-sections -fstack-usage --specs=nano.specs -g3 -gdwarf-2 -O0</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) -g3 -gdwarf-2 -O0</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -96,7 +96,6 @@
       <SupportJustMyCode></SupportJustMyCode>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <WarningLevel>EnableAllWarnings</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;DEBUG;APPLICATIONS_LAYER=1;CMAKE_INTDIR="Debug"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
@@ -120,7 +119,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>Z:\tweakn_firmware\Tweakngeek_Firmware\include;Z:\tweakn_firmware\Tweakngeek_Firmware\src;Z:\tweakn_firmware\Tweakngeek_Firmware\src\applications;Z:\tweakn_firmware\Tweakngeek_Firmware\src\runtime;Z:\tweakn_firmware\Tweakngeek_Firmware\src\kernel;Z:\tweakn_firmware\Tweakngeek_Firmware\src\hal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wextra -Wpedantic -fdata-sections -ffunction-sections -fstack-usage --specs=nano.specs -g3 -gdwarf-2 -O0</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) -g3 -gdwarf-2 -O0</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ExceptionHandling>
@@ -136,7 +135,6 @@
       <SupportJustMyCode></SupportJustMyCode>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <WarningLevel>EnableAllWarnings</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;DEBUG;APPLICATIONS_LAYER=1;CMAKE_INTDIR="Release"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
@@ -162,7 +160,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>Z:\tweakn_firmware\Tweakngeek_Firmware\include;Z:\tweakn_firmware\Tweakngeek_Firmware\src;Z:\tweakn_firmware\Tweakngeek_Firmware\src\applications;Z:\tweakn_firmware\Tweakngeek_Firmware\src\runtime;Z:\tweakn_firmware\Tweakngeek_Firmware\src\kernel;Z:\tweakn_firmware\Tweakngeek_Firmware\src\hal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wextra -Wpedantic -fdata-sections -ffunction-sections -fstack-usage --specs=nano.specs -g3 -gdwarf-2 -O0</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) -g3 -gdwarf-2 -O0</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <ExceptionHandling>
@@ -178,7 +176,6 @@
       <SupportJustMyCode></SupportJustMyCode>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <WarningLevel>EnableAllWarnings</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;DEBUG;APPLICATIONS_LAYER=1;CMAKE_INTDIR="MinSizeRel"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <DebugInformationFormat>
@@ -204,7 +201,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>Z:\tweakn_firmware\Tweakngeek_Firmware\include;Z:\tweakn_firmware\Tweakngeek_Firmware\src;Z:\tweakn_firmware\Tweakngeek_Firmware\src\applications;Z:\tweakn_firmware\Tweakngeek_Firmware\src\runtime;Z:\tweakn_firmware\Tweakngeek_Firmware\src\kernel;Z:\tweakn_firmware\Tweakngeek_Firmware\src\hal;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <AdditionalOptions>%(AdditionalOptions) -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard -Wextra -Wpedantic -fdata-sections -ffunction-sections -fstack-usage --specs=nano.specs -g3 -gdwarf-2 -O0</AdditionalOptions>
+      <AdditionalOptions>%(AdditionalOptions) -g3 -gdwarf-2 -O0</AdditionalOptions>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>Default</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -221,7 +218,6 @@
       <SupportJustMyCode></SupportJustMyCode>
       <TreatWChar_tAsBuiltInType></TreatWChar_tAsBuiltInType>
       <UseFullPaths>false</UseFullPaths>
-      <WarningLevel>EnableAllWarnings</WarningLevel>
       <PreprocessorDefinitions>%(PreprocessorDefinitions);WIN32;_WINDOWS;NDEBUG;DEBUG;APPLICATIONS_LAYER=1;CMAKE_INTDIR="RelWithDebInfo"</PreprocessorDefinitions>
       <ObjectFileName>$(IntDir)</ObjectFileName>
       <ScanSourceForModuleDependencies>false</ScanSourceForModuleDependencies>
