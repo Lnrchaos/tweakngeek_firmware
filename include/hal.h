@@ -251,4 +251,59 @@ hal_result_t hal_resource_get_info(uint32_t resource_id, hal_resource_t *resourc
  */
 bool hal_resource_is_available(hal_resource_type_t type, uint32_t base_address, uint32_t size);
 
+/* HAL Utility Functions */
+
+/**
+ * @brief Get device count by type
+ * @param type Device type
+ * @return Number of devices of specified type
+ */
+uint32_t hal_device_get_count_by_type(hal_device_type_t type);
+
+/**
+ * @brief Get all devices of a specific type
+ * @param type Device type
+ * @param devices Array to store device pointers
+ * @param max_devices Maximum number of devices to return
+ * @return Number of devices found
+ */
+uint32_t hal_device_get_by_type(hal_device_type_t type, hal_device_t **devices, uint32_t max_devices);
+
+/**
+ * @brief Validate device configuration
+ * @param config Device configuration
+ * @return HAL_OK if valid, error code otherwise
+ */
+hal_result_t hal_device_validate_config(const hal_device_config_t *config);
+
+/**
+ * @brief Get device type name string
+ * @param type Device type
+ * @return String representation of device type
+ */
+const char *hal_device_type_to_string(hal_device_type_t type);
+
+/**
+ * @brief Get device state name string
+ * @param state Device state
+ * @return String representation of device state
+ */
+const char *hal_device_state_to_string(hal_device_state_t state);
+
+/**
+ * @brief Get resource type name string
+ * @param type Resource type
+ * @return String representation of resource type
+ */
+const char *hal_resource_type_to_string(hal_resource_type_t type);
+
+/**
+ * @brief Calculate resource usage statistics
+ * @param type Resource type (HAL_RESOURCE_TYPE_MAX for all types)
+ * @param total_count Pointer to store total resource count
+ * @param used_count Pointer to store used resource count
+ * @return HAL_OK on success, error code otherwise
+ */
+hal_result_t hal_resource_get_usage_stats(hal_resource_type_t type, uint32_t *total_count, uint32_t *used_count);
+
 #endif /* HAL_H */

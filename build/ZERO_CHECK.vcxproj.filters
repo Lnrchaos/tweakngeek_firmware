@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="Z:\tweakn_firmware\Tweakngeek_Firmware\build\CMakeFiles\72f40e9dd109c0940402879b110d114d\generate.stamp.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{7B85F9A1-CABE-3079-9EAE-F08DB63616E4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

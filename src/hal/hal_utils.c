@@ -7,6 +7,7 @@
  */
 
 #include "hal.h"
+#include "hal_internal.h"
 #include <string.h>
 
 /**
@@ -17,11 +18,7 @@
 uint32_t hal_device_get_count_by_type(hal_device_type_t type)
 {
     uint32_t count = 0;
-    hal_device_t *device = hal_device_find_by_name(NULL);  /* Get first device */
-    
-    /* Iterate through all devices */
-    extern hal_device_t *device_list_head;  /* Access to internal list */
-    device = device_list_head;
+    hal_device_t *device = device_list_head;
     
     while (device != NULL) {
         if (device->type == type) {
@@ -47,7 +44,6 @@ uint32_t hal_device_get_by_type(hal_device_type_t type, hal_device_t **devices, 
     }
 
     uint32_t count = 0;
-    extern hal_device_t *device_list_head;
     hal_device_t *device = device_list_head;
     
     while (device != NULL && count < max_devices) {
@@ -159,7 +155,6 @@ hal_result_t hal_resource_get_usage_stats(hal_resource_type_t type, uint32_t *to
     *total_count = 0;
     *used_count = 0;
 
-    extern hal_resource_t *resource_list_head;
     hal_resource_t *resource = resource_list_head;
     
     while (resource != NULL) {

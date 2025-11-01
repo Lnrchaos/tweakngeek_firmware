@@ -1,0 +1,10 @@
+^Z:\TWEAKN_FIRMWARE\TWEAKNGEEK_FIRMWARE\BUILD\CMAKEFILES\72F40E9DD109C0940402879B110D114D\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SZ:/tweakn_firmware/Tweakngeek_Firmware -BZ:/tweakn_firmware/Tweakngeek_Firmware/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file Z:/tweakn_firmware/Tweakngeek_Firmware/build/TweaknGeek_Firmware.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

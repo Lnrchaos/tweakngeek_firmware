@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Z:\tweakn_firmware\Tweakngeek_Firmware\src\runtime\runtime_stub.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="Z:\tweakn_firmware\Tweakngeek_Firmware\src\runtime\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{C218E95F-89C2-3FA8-8635-4BAD350FE054}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

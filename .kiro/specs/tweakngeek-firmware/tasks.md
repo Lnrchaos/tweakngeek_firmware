@@ -52,13 +52,15 @@
 
 
 
-  - [ ] 3.1 Create base HAL framework
+  - [x] 3.1 Create base HAL framework
+
     - Define HAL interface structures and function pointers
     - Implement hardware resource management
     - Create device driver registration system
     - _Requirements: 2.2, 5.2_
 
-  - [ ] 3.2 Implement GPIO HAL
+  - [-] 3.2 Implement GPIO HAL
+
     - Write GPIO pin configuration and control functions
     - Create interrupt-driven GPIO handling
     - Implement dynamic pin function assignment

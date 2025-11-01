@@ -7,6 +7,7 @@
  */
 
 #include "hal.h"
+#include "hal_internal.h"
 #include <string.h>
 #include <stddef.h>
 #include <stdlib.h>
@@ -442,4 +443,30 @@ bool hal_resource_is_available(hal_resource_type_t type, uint32_t base_address, 
     }
 
     return true;  /* No conflicts found */
+}
+
+/* Internal helper functions */
+
+/**
+ * @brief Get pointer to device list head
+ */
+hal_device_t *hal_internal_get_device_list(void)
+{
+    return device_list_head;
+}
+
+/**
+ * @brief Get pointer to resource list head
+ */
+hal_resource_t *hal_internal_get_resource_list(void)
+{
+    return resource_list_head;
+}
+
+/**
+ * @brief Check if HAL is initialized
+ */
+bool hal_internal_is_initialized(void)
+{
+    return hal_initialized;
 }
