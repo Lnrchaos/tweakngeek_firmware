@@ -1,8 +1,0 @@
-Z:/tweakn_firmware/Tweakngeek_Firmware/build/CMakeFiles/tweakngeek_firmware.dir
-Z:/tweakn_firmware/Tweakngeek_Firmware/build/CMakeFiles/ALL_BUILD.dir
-Z:/tweakn_firmware/Tweakngeek_Firmware/build/CMakeFiles/ZERO_CHECK.dir
-Z:/tweakn_firmware/Tweakngeek_Firmware/build/src/kernel/CMakeFiles/kernel.dir
-Z:/tweakn_firmware/Tweakngeek_Firmware/build/src/hal/CMakeFiles/hal.dir
-Z:/tweakn_firmware/Tweakngeek_Firmware/build/src/runtime/CMakeFiles/runtime.dir
-Z:/tweakn_firmware/Tweakngeek_Firmware/build/src/applications/CMakeFiles/applications.dir
-Z:/tweakn_firmware/Tweakngeek_Firmware/build/src/services/CMakeFiles/services.dir
