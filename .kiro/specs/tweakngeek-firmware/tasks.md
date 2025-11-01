@@ -59,14 +59,16 @@
     - Create device driver registration system
     - _Requirements: 2.2, 5.2_
 
-  - [-] 3.2 Implement GPIO HAL
+  - [x] 3.2 Implement GPIO HAL
+
 
     - Write GPIO pin configuration and control functions
     - Create interrupt-driven GPIO handling
     - Implement dynamic pin function assignment
     - _Requirements: 5.4, 2.2_
 
-  - [ ] 3.3 Implement Radio HAL for CC1101 and Bluetooth
+  - [-] 3.3 Implement Radio HAL for CC1101 and Bluetooth
+
     - Write unified radio interface for multiple hardware types
     - Create frequency and power management functions
     - Implement protocol-agnostic transmission and reception

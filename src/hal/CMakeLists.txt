@@ -4,6 +4,7 @@
 set(HAL_SOURCES
     hal_base.c
     hal_utils.c
+    hal_gpio.c
     hal_stub.c
 )
 
